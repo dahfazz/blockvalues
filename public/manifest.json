@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "name": "Block values",
+  "short_name": "Blockvalues",
+  "icons": {
+    "512": "/favicons/android-chrome-512x512.png",
+    "192": "/favicons/android-chrome-192x192.png"
+  },
+  "browser_action": {
+    "default_icon": "/favicons/android-chrome-192x192.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "https://api.kraken.com/"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+}

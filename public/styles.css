@@ -1,0 +1,231 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #36404C;
+  font-family: 'Roboto', 'Arial', 'sans-serif';
+}
+
+body {
+  min-width: 300px;
+  min-height: 500px;
+}
+
+:root {
+  --mdc-theme-primary: #212121;
+  --mdc-theme-accent: #64DD17;
+}
+
+.menu__opener {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.mdc-card {
+  background: white;
+  position: relative;
+  padding: 20px 0 !important;
+}
+
+.mdc-card:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 6px;
+  background: #03CDB7;
+  animation: expand 20s infinite;
+}
+
+.mdc-toolbar {
+  background: #2C3640 !important;
+}
+/*
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', 'Arial', 'sans-serif';
+  height: 100vh;
+}
+
+@media (max-width: 700px) {
+  html {
+    background: #2C3640;
+  }
+}
+
+.item {
+  padding: 50px;
+  background: #2C3640;
+  text-align: center;
+  position: relative;
+}
+
+.item__label {
+  text-transform: uppercase;;
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: #36404C;
+  margin-bottom: 15px;
+}
+
+.item__value {
+  font-size: 70px;
+  color: white;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+*/
+.item__value:after {
+  content : '€';
+}
+.item__evolLabel {
+  margin-bottom: 10px;
+}
+/*
+.item__evolLabel {
+  text-transform: uppercase;;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: #36404C;
+  margin-bottom: 15px;
+}
+.item__evolValue {
+  font-size: 40px;
+  color: white;
+}
+*/
+.item__evol {
+  margin: 10px;
+}
+.item__evol--up {
+  color: #03CDB7;
+}
+.item__evol--down {
+  color: #FE0176;
+}
+.item__evol--up:before {
+  content: '+';
+}
+.item__evolValue:after {
+  content : '%';
+}
+.item__earning:after {
+  content: '€';
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: #777;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #03CDB7;
+}
+/*
+.refresher {
+  border: none;
+  background: none;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  color: white;
+  outline: none;
+  font-size: 30px;
+}
+.refreshing {
+  animation: rotate .6s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+.dialog {
+  overflow: hidden;
+  transform: translateY(-1000px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  height: 250px;
+  margin: auto;
+  background: white;
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  z-index: 3;
+  padding: 10px;
+}
+
+.dialog.visible {
+  animation: fall .3s;
+  animation-fill-mode: forwards;
+}
+
+.dialog > label {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+}
+
+.dialog .mdc-textfield {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.dialog .mdc-button--raised {
+  float: right;
+  background: #000;
+  color: white;
+}
+
+.button {
+  position: fixed !important;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 220px;
+  background: #03CDB7 !important;
+  color: #fff !important;
+}
+
+
+@keyframes fall {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
